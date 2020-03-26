@@ -23,11 +23,8 @@ RUN curl -L --output /tmp/apache-maven-bin.zip  https://www-eu.apache.org/dist/m
     rm /tmp/apache-maven-bin.zip && \
     mkdir -p $HOME/.m2
 
-RUN chown -R 1001:0 $HOME && \
-    chmod -R g+rw $HOME
+RUN chown -R 1001:0 $HOME && chmod -R g+rw $HOME
 
 COPY run-jnlp-client /usr/local/bin/
-
-RUN ls -alrth /usr/local/bin/
 
 USER 1001
