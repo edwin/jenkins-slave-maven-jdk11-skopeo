@@ -6,6 +6,9 @@ MAINTAINER Muhammad Edwin < edwin at redhat dot com >
 ENV MAVEN_VERSION=3.6.3 \
     PATH=$PATH:/opt/maven/bin
 
+ENV JAVA_HOME=/usr/lib/jvm/jdk-11.0.2 \
+    PATH=$PATH:$JAVA_HOME/bin
+
 # install skopeo
 RUN yum install skopeo -y && yum clean all
 
